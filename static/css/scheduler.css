@@ -1,0 +1,32 @@
+.form{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.control-label{
+    padding-top: 40px;
+}
+#contributors{
+    width:10%;
+}
+
+#welcome{
+    padding: 30px;
+    color: cadetblue;
+}
+
+#description{
+
+    padding-bottom: 200px;
+}
+#submit{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 45%;
+    margin-top: 40px;
+    margin-bottom:40px;
+    border-width: medium;
+    background-color: aliceblue;
+    border-color: darkslateblue;
+
+}

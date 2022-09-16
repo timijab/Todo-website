@@ -1,0 +1,43 @@
+@font-face{
+    font-family: myFont;
+    src: url(GentiumBookBasic-Bold.ttf);
+}
+@font-face{
+    font-family: myFont2;
+    src: url(Recursive-VariableFont_CASL,CRSV,MONO,slnt,wght.ttf);
+}
+@font-face{
+    font-family: myNewFont;
+    src: url(Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf);
+}
+body{
+    font-family: myFont, sans serif;
+}
+.logo{
+    width: 10%;
+    border-radius: 100%;
+}
+
+.logo-items{
+
+
+}
+
+.nav-item{
+    margin-left: 20%;
+    margin-left: 20%;
+    color: black;
+}
+.navbar{
+    background-color: aliceblue;
+    padding: 0px;
+}
+.navbar-brand{
+    width: 350px;
+
+}
+
+.logo-items{
+
+
+}
