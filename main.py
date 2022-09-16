@@ -8,7 +8,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from flask_sqlalchemy import SQLAlchemy
 import os
-from flask_gravatar import Gravatar
+
 
 HASH = 'pbkdf2:sha256'
 app = Flask(__name__)
@@ -24,7 +24,7 @@ db = SQLAlchemy(app)
 Bootstrap(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
-gravatar = Gravatar(app, size=100, rating='g', default='retro', force_default=False, force_lower=False, use_ssl=False, base_url=None)
+
 
 
 @login_manager.user_loader
