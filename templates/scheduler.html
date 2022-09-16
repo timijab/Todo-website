@@ -1,0 +1,13 @@
+<link href="{{ url_for('static', filename='css/scheduler.css')}}" rel="stylesheet" type="text/css">
+{% include 'header.html' %}
+<div class="background">
+    {% if current_user.is_authenticated %}
+        <h5 id="welcome"> Welcome {{ current_user.name }}, </h5>
+    {% endif %}
+
+    {% import 'bootstrap/wtf.html' as wtf %}
+
+
+    {{ wtf.quick_form(form) }}
+</div>
+{% include 'footer.html' %}

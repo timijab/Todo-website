@@ -1,0 +1,39 @@
+{% include 'header.html'%}
+<link href="{{ url_for('static', filename='css/display.css')}}" rel="stylesheet" type="text/css">
+{% import 'bootstrap/wtf.html' as wtf %}
+<div class="container">
+        <table class="table">
+
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col"> Task </th>
+          <th scope="col"> Collaborator name </th>
+          <th scope="col"> collaborator Task </th>
+          <th scope="col"> Timeline </th>
+          <th scope="col"> Due Time </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for c in tasks %}
+        <tr>
+          <th scope="row"></th>
+          <td>{{ c.Task }}</td>
+          <td>{{ c.collaborator_name }}</td>
+          <td> {{ c.collaborator_task }}</td>
+          <td> {{ c.timeline }} </td>
+          <td> {{ c.due_time }}</td>
+          <td><button class="btn btn-light" onclick="window.open('#')"> Edit </button></td>
+        </tr>
+        {% endfor %}
+
+
+
+      </tbody>
+
+
+    </table>
+
+    </div>
+

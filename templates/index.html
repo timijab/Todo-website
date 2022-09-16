@@ -1,0 +1,85 @@
+{% include 'header.html' %}
+<link href="{{ url_for('static', filename='/css/indexstyle.css') }}" rel="stylesheet" type="text/css">
+<body>
+<div class="main-body-head">
+    <img id="centerimg" src="/static/img/ToDo.jpg">
+    <div class="container first">
+        <div class="row align-items-center title">
+            <div class="col">
+                <h3> <span id="spum">T0dO</span> helps you manage your time effectively </h3>
+                <h3> Best to use <span id="spum">TOdO</span>, Your online Secretary </h3>
+            </div>
+        </div>
+</div>
+
+    </div>
+    <hr class="container">
+<div class="container mid">
+    <div class="row align-items-center">
+        <div class="col">
+             <div class="card" style="width: 18rem;">
+                <img src="static/img/ToDo (2).png" class="card-img-top" alt="background to signify time management">
+            <div class="card-body">
+                <h5 class="card-title"> Time management </h5>
+                <p class="card-text"> Manage your time, meet your target on time!!! </p>
+                <a href="{% if current_user.is_authenticated: %}
+                            {{ url_for('schedule')}}
+                          {% elif not current_user.is_authenticated: %}
+                            {{ url_for('registration') }}
+                          {% endif %}" class="btn btn-primary"> Set appointments</a>
+            </div>
+            </div>
+        </div>
+        <div class="col">
+             <div class="card" style="width: 18rem;">
+                <img src="static/img/ToDo (3).png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Collaboration </h5>
+                <p class="card-text"> Set your team target, Get everyone on same page on the same project timeline </p>
+                <a href="{{url_for('registration')}}" class="btn btn-primary"> Collaborate </a>
+            </div>
+            </div>
+
+        </div>
+
+        </div>
+            <p> </p>
+            <hr>
+
+
+    <div class="motivation">
+                <h3 id="motivation_words"> It is about doing, let us begin with you </h3>
+                <p> “You may delay, but time will not.” </p>
+                <img src="/static/img/Benjamin.jpg" class="motivation" alt="picture of benjamin franklin" style="width: 10%; border-radius:100%;">
+                <br>
+                <em> Benjamin Franklin </em>
+                <p></p>
+                <a href="#" class="btn btn-primary"> Let's Start </a>
+    </div>
+
+
+<!--    <div class="container">-->
+<!--        <img src="/static/img/schedule.jpg" alt="schedule image" class="schedule">-->
+
+<!--    </div>-->
+        <br>
+        <div class="container left">
+            <h5> Website to help you organise your team meeting. </h5>
+            <p> Register your account and login then add your schedules </p>
+            <p> Get to your meetings on time, and send reminders to all colleagues </p>
+        </div>
+        <br>
+        <div class="container right">
+            <h5> Set Reminders </h5>
+            <p> You don't have to send an email remind your colleagues we will do that for you </p>
+            <p> Let us organise your meetings and schedule your task as you require </p>
+        </div>
+
+
+
+
+        </div>
+
+    </div>
+{% include 'footer.html' %}
+

@@ -1,0 +1,9 @@
+<link href="{{url_for('static', filename='css/register.css')}}" type="text/css" rel="stylesheet">
+<div class="bacg">
+    {% include 'header.html' %}
+    <h5 class="descrip"> Register </h5>
+    {% import 'bootstrap/wtf.html' as wtf %}
+
+    {{ wtf.quick_form(form) }}
+
+</div>
